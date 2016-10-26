@@ -1,0 +1,221 @@
+body{
+    /*background-image: url('images/volleyball.png');
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    background-color: #f0f0f0;
+    font-size:20px;
+    font-weight: 300;
+    font-family: 'Shift', sans-serif;
+    margin-bottom: 0px;
+}
+.navbar-default{
+    background:#33333f;
+    border:none;
+    border-radius: 0px;
+    color:#fff;
+    line-height: 30px;
+    margin-bottom: 0px;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+}
+.navbar-default .navbar-brand {
+    font-size:34px;
+    font-weight:500;
+    color:#fff;
+    font-family: 'Shift', sans-serif;
+ 
+}
+#header {
+    display: inline;
+}
+.navbar-btn {   
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow:none;
+    color:#fff;
+    background:none;
+}
+#profName {
+    color:#fff;
+    font-size: 20px;
+}
+#newGroup {
+border-top: 1px solid #b6b6b6;
+border-bottom: 1px solid #b6b6b6;
+
+}
+#myGroups {
+    border-top: 1px solid #b6b6b6;
+
+}
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+
+.jumbotron {
+      height:900px;
+      background-image: url('images/volleyball.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin-bottom: 0px;
+}
+
+.jumbotron .container {
+  position: relative;
+  top:100px;
+  padding-bottom: 120px;
+  max-width: 75%;
+  margin:auto;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-size: 48px;  
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px rgba(0, 0, 0, .5);
+
+}
+
+.jumbotron p {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    font-weight: 600;
+    margin-left: 100px;
+    margin-right: 100px;
+    text-shadow: 2px 2px rgba(0, 0, 0, .5);
+
+}
+#main-input {
+  padding-left: 0px;
+  position: fixed;
+  bottom:0;
+  right:0;
+}
+h1 {
+  padding: 10px;
+  border-bottom: 1px solid #b6b6b6;
+}
+.message-content {
+  display: flex;
+  flex-direction:column;
+  justify-content: flex-start;
+    padding:0 16px;
+}
+h5 {
+  color: #33333f;
+  font-size:18px;
+
+}
+p {
+  color: #33333f;
+  font-size: 14px;
+  font-weight:200;
+} 
+
+#container {
+  padding: 0px;
+}
+#main-content{
+    margin-top:50px;
+    display:flex;flex-direction:column;
+    max-height:calc(100vh - 50px - 48px);
+    overflow-y:scroll;
+    padding:0px
+}
+.messageIn{
+  display:flex;flex-direction:row;
+  padding: 10px;
+    border-bottom: 1px solid #b6b6b6;
+
+}
+.avatar-container{
+    display:flex;flex-direction:column;
+    justify-content:center;
+    overflow: hidden;
+}
+.avatar-img {
+  float:left;
+  color: #fff;
+    line-height:50px;
+    font-size: 30px;
+    text-align: center;
+    height:50px;
+    width:50px;
+    margin: auto;
+}
+fieldset.inputs{
+    background-color: #fff;
+    -moz-border-radius:5px;  
+    border-radius: 5px;  
+    -webkit-border-radius: 5px;
+  -webkit-box-shadow: 0px 4px 9px 4px rgba(0,0,0,0.4);
+-moz-box-shadow: 0px 4px 9px 4px rgba(0,0,0,0.4);
+box-shadow: 0px 4px 9px 4px rgba(0,0,0,0.4);
+  margin-bottom: 15px;
+}
+fieldset .form-group {
+  padding:10px;
+  font-family: 'Shift', sans-serif;
+  text-align: center;
+  display: inline;
+}
+fieldset.inputs legend {
+  background-color: #fff;
+  height:40px;
+  display:inline-block;
+  text-align: left;
+  color:#33333f;
+  font-family: 'Shift', sans-serif;
+  font-size:18px;
+  padding-top: 8px;
+  padding-left: 13px;
+    -moz-border-radius:5px;  
+    border-radius: 5px;  
+    -webkit-border-radius: 5px;
+    margin-bottom: 0px;
+}
+
+
+@media screen and (max-device-width:980px) {
+    .navbar a{
+        font-size:12px;
+    }
+    body{
+        background-image: none;
+    }
+    #main-content{
+        width:100vw;
+        border-radius:0;
+        margin-left:-16px;
+    }
+
+    #main-input{
+        bottom:20px;
+        right:-16px;
+        height:48px;
+    }
+    #actual-inputs{
+        width:calc(100vw + 16px);
+        background:#fff;
+        box-shadow:none;
+        padding:4px 16px;
+    }
+    #actual-inputs > legend{
+        display:none;
+    }
+    #actual-inputs .form-group{
+        display:flex;flex-direction:row;
+    }
+}
+
+ /*#3B5998*/

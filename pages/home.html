@@ -1,0 +1,50 @@
+<div id = "homePage" ng-if="!loggedIn">
+	 <div class="jumbotron">
+      	<div class="container">
+      		<h1>This is Chatter 2</h1>
+        	<p>Login with your Facebook account and start chatting with anyone around the world. As long as they have a Facebook account.</p>
+     	</div>
+	</div>
+</div>
+
+<div id ="userHomePage" ng-if="loggedIn">
+
+          <div id="container" class="container">
+            <div class="col-xs-12 col-md-8" id="main-content">
+                  <div id="general" class="">
+                          <h1>General Conversation</h1>
+
+                          <div id="messages">
+                            <div class="messageIn" ng-repeat="message in messages">
+                              <div class="avatar-container img-circle" height="80" width="80">
+                                 <img class="img-responsive" id="profImg" src="{{message.img}}">
+                              </div>
+                              <div class="message-content">
+                                <h5>{{message.displayname}}</h5>
+                                <p>{{message.message}}</p>
+                              </div>
+                            </div>
+                          </div><!--messages-->
+
+                  </div>
+            </div>
+          </div>
+               
+
+      <div class="container-fluid" id="main-input">
+
+          <fieldset class="inputs" id="actual-inputs">
+            <legend>
+              What's on your mind?
+            </legend>
+            <form class="form-inline" role="form"> 
+              <div class="form-group">
+                  <input type='text' id='messageInput' maxlength="200" class="form-control" placeholder='Message'> 
+                  <button type="submit" class="btn btn-primary" onclick="addMessage()">Submit</button>
+              </div>
+            </form>
+          </fieldset>
+      </div>
+    </div><!-- /.container -->
+
+</div>

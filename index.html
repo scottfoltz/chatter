@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="pickupGame">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	    <!--JQuery-->
+	    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+	    <!-- Bootstrap CSS -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	    <!-- Bootstrap Core CSS -->
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+	    <!-- Custom CSS -->
+	    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+	    <!-- Optional theme -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	    <!--AngularJS-->
+	    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.min.js"></script>
+	    <!--Firebase-->
+	    <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+	    <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
+    	<script src="js/main.js"></script>
+   	<script src="js/hr.js"></script>
+
+    	<link rel="stylesheet" href="css/style.css">
+    	<title>Pick-Up Game - Connect your Squad</title>
+	</head>
+
+	<body ng-controller="appController">
+
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  	<div class="container-fluid">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+				    <a class="navbar-brand" rel="home" href="#" title="Pickup Game">Chatter 2</a>
+			    </div>
+				<div class="nav navbar-nav navbar-right" ng-if="loggedIn">
+				        <li><a href="#profile">Profile </a></li>
+				        <li onclick="logOutUser()"><a href="#/">Logout</a></li>
+				</div>
+				<div class="nav navbar-nav navbar-right" ng-if="!loggedIn">
+					<button type="button" ng-click="loginWith('facebook')" class="btn btn-default navbar-btn" id="lgnbtn">Log in with Facebook</button>
+				</div>
+		    </div>
+		</nav>
+	    <div id="wrapper" ng-if="loggedIn">
+
+	        <!-- Sidebar -->
+	        <div id="sidebar-wrapper">
+	            <ul class="sidebar-nav">
+	                <li class="sidebar-brand">
+	                    <a href="#">
+						    <img class="img-circle" id="profImg" src="{{user.img}}" height="80" width="80" >
+							<span id="profName" ng-bind="user.name"></span>	
+	                    </a>
+	                </li>
+
+	                <li id="myGroups">
+	                	<a href="#/">My Groups </a>  
+	                </li>
+	                <li id="newGroup">
+	                    <a onclick="#groups">New Group</a>
+	                </li>
+	                <li>
+	            </ul>
+	        </div>
+	        <!-- /#sidebar-wrapper -->
+
+	        <!-- Page Content -->
+	        <div id="page-content-wrapper">
+	            <div class="container-fluid">
+              		<content>
+			    		<div id="mainView" ng-view>
+			        		<!--Angular Stuff happens here-->
+			    		</div>
+			    	</content>
+	            </div>
+	        </div>
+	        <!-- /#page-content-wrapper -->
+
+	    </div>
+	    <!-- /#wrapper -->
+
+ 		<content ng-if="!loggedIn">
+    		<div id="mainView" ng-view>
+        		<!--Angular Stuff happens here-->
+    		</div>
+    	</content>
+
+		  <!--Third-party JS-->
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+		  <script src="https://code.angularjs.org/1.4.4/angular-route.js"></script>
+		  <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+		  <script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script>
+	    <!-- JQuery UI. You must include this to get access to the UI widgets -->
+	    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+	   <!-- Menu Toggle Script -->
+	    <script>
+	    $("#menu-toggle").click(function(e) {
+	        e.preventDefault();
+	        $("#wrapper").toggleClass("toggled");
+	    });
+    </script>
+ 
+	</body>
+</html>
